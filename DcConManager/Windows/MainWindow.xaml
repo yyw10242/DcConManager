@@ -1,0 +1,13 @@
+﻿<Window x:Class="DcConManager.Windows.MainWindow"
+        xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        
+        Title="MainWindow">
+
+  <TextBlock Text="Welcome to DcConManager!"
+             FontSize="25"
+             VerticalAlignment="Center"
+             HorizontalAlignment="Center"/>
+    
+</Window>

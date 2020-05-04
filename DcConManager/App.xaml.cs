@@ -1,29 +1,17 @@
-﻿using Avalonia;
-using Avalonia.Controls;
-using Avalonia.Controls.ApplicationLifetimes;
-using Avalonia.Markup.Xaml;
-
-using DcConManager.Windows;
+﻿using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows;
 
 namespace DcConManager
 {
-    public class App : Application
+    /// <summary>
+    /// App.xaml에 대한 상호 작용 논리
+    /// </summary>
+    public partial class App : Application
     {
-        public override void Initialize()
-        {
-            AvaloniaXamlLoader.Load(this);
-            Core.SplashPopup();
-        }
-
-        // No more use
-        //public override void OnFrameworkInitializationCompleted()
-        //{
-        //    if (this.ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
-        //    {
-        //        desktop.MainWindow = Core.MainWindow;
-        //        desktop.ShutdownMode = ShutdownMode.OnExplicitShutdown;
-        //    }
-        //    base.OnFrameworkInitializationCompleted();
-        //}
     }
 }

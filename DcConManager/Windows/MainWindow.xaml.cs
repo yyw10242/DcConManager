@@ -14,6 +14,8 @@ using System.Windows.Shapes;
 
 using MahApps.Metro.Controls;
 
+using DcConManager.Utilities.ExtendedMethods;
+
 namespace DcConManager.Windows
 {
     public partial class MainWindow : MetroWindow
@@ -21,6 +23,15 @@ namespace DcConManager.Windows
         public MainWindow()
         {
             this.InitializeComponent();
+
+            this.SetImages();
+        }
+
+        private void SetImages()
+        {
+            this.Image0.SetBitmap(DcConManager.Properties.Resources.QuickStartImage);
+            this.Image1.SetBitmap(DcConManager.Properties.Resources.StartManagerImage);
+            this.Image2.SetBitmap(DcConManager.Properties.Resources.BridgeBBDDSettingsImage);
         }
     }
 }

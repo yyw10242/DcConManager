@@ -6,13 +6,38 @@
                  xmlns:local="clr-namespace:DcConManager.Windows"
                  xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
                  mc:Ignorable="d"
-        
-                 Title="MainWindow"
-                 
-                 Height="450" Width="800"
-                 
-                 >
-    <Grid>
-        
+
+                 Title="DcConManager For BridgeBBCC"
+                 TitleCharacterCasing="Normal"
+
+                 Height="450" Width="800">
+
+    <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Image x:Name="Image0" Grid.Column="0"
+                   Width="200" Height="200"/>
+            <Image x:Name="Image1" Grid.Column="1"
+                   Width="200" Height="200"/>
+            <Image x:Name="Image2" Grid.Column="2"
+                   Width="200" Height="200"/>
+        </Grid>
+
+        <TextBlock Grid.Row="1"
+                   TextAlignment="Right">
+            "그냥 텍스트 입니다" Channel: 채널명   BridgeBBCC_Path: 경로 Github Repo: 깃허브 레포 주소
+        </TextBlock>
+
     </Grid>
+
 </mah:MetroWindow>

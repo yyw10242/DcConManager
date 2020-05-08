@@ -18,7 +18,7 @@ using DcConManager.Utilities.ExtendedMethods;
 
 namespace DcConManager.Windows
 {
-    public partial class MainWindow : MetroWindow
+    public partial class MainWindow : BaseWindow
     {
         public MainWindow()
         {

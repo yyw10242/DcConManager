@@ -5,6 +5,7 @@
                   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                   xmlns:local="clr-namespace:DcConManager.Windows"
                   xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+                  xmlns:controls="clr-namespace:DcConManager.Controls"
                   mc:Ignorable="d"
 
                   Title="DcConManager For BridgeBBCC"
@@ -12,34 +13,70 @@
                   IsDraggable="True"
                   CloseToKill="True"
 
-                  Height="450" Width="800">
+                  Height="500" MinHeight="500"
+                  Width="700" MinWidth="700">
 
-    <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
+    <Grid>
+        <Grid x:Name="MainGrid"
+              VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
 
-        <Grid Grid.Row="0" Margin="10">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
+            <Grid Grid.Row="0"
+                  Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
 
-            <Image x:Name="Image0" Grid.Column="0"
-                   Width="200" Height="200"/>
-            <Image x:Name="Image1" Grid.Column="1"
-                   Width="200" Height="200"/>
-            <Image x:Name="Image2" Grid.Column="2"
-                   Width="200" Height="200"/>
+                <controls:MetroButton x:Name="Button0" Grid.Column="0"
+                                      Padding="0" BorderThickness="0"
+                                      Click="Button0_Click">
+                    <controls:MetroButton.Icon>
+                        <Image/>
+                    </controls:MetroButton.Icon>
+                </controls:MetroButton>
+
+                <controls:MetroButton x:Name="Button1" Grid.Column="1"
+                                      Padding="0" BorderThickness="0"
+                                      Click="Button1_Click">
+                    <controls:MetroButton.Icon>
+                        <Image/>
+                    </controls:MetroButton.Icon>
+                </controls:MetroButton>
+
+                <controls:MetroButton x:Name="Button2" Grid.Column="2"
+                                      Padding="0" BorderThickness="0"
+                                      Click="Button2_Click">
+                    <controls:MetroButton.Icon>
+                        <Image/>
+                    </controls:MetroButton.Icon>
+                </controls:MetroButton>
+            </Grid>
+
+            <TextBlock x:Name="StatusBlock" Grid.Row="1"
+                    TextAlignment="Right">
+                "그냥 텍스트 입니다" Channel: 채널명   BridgeBBCC_Path: 경로 Github Repo: 깃허브 레포 주소
+            </TextBlock>
+
         </Grid>
-
-        <TextBlock Grid.Row="1"
-                   TextAlignment="Right">
-            "그냥 텍스트 입니다" Channel: 채널명   BridgeBBCC_Path: 경로 Github Repo: 깃허브 레포 주소
-        </TextBlock>
-
     </Grid>
+
+    <mah:MetroWindow.Flyouts>
+        <mah:FlyoutsControl>
+            <mah:Flyout x:Name="QuickStartFlyout"
+                        Position="Left" Header="Quick Start"
+                        Theme="Accent"
+                        Margin="0,31,0,0"
+                        Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=mah:MetroWindow}, Path=ActualWidth}">
+                <Frame x:Name="QuickStartFrame"
+                       NavigationUIVisibility="Hidden"
+                       Margin="4"/>
+            </mah:Flyout>
+        </mah:FlyoutsControl>
+    </mah:MetroWindow.Flyouts>
 
 </local:BaseWindow>

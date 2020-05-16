@@ -25,13 +25,30 @@ namespace DcConManager.Windows
             this.InitializeComponent();
 
             this.SetImages();
+
+            this.QuickStartFrame.Content = Core.QuickstartPage1;
         }
 
         private void SetImages()
         {
-            this.Image0.SetBitmap(DcConManager.Properties.Resources.QuickStartImage);
-            this.Image1.SetBitmap(DcConManager.Properties.Resources.StartManagerImage);
-            this.Image2.SetBitmap(DcConManager.Properties.Resources.BridgeBBDDSettingsImage);
+            (this.Button0.Icon as Image).SetBitmap(DcConManager.Properties.Resources.QuickStartImage);
+            (this.Button1.Icon as Image).SetBitmap(DcConManager.Properties.Resources.StartManagerImage);
+            (this.Button2.Icon as Image).SetBitmap(DcConManager.Properties.Resources.BridgeBBDDSettingsImage);
+        }
+
+        private void Button0_Click(object sender, RoutedEventArgs e)
+        {
+            this.QuickStartFlyout.IsOpen = !this.QuickStartFlyout.IsOpen;
+        }
+
+        private void Button1_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button2_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

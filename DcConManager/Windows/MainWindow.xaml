@@ -14,7 +14,9 @@
                   CloseToKill="True"
 
                   Height="500" MinHeight="500"
-                  Width="700" MinWidth="700">
+                  Width="700" MinWidth="700"
+                  
+                  Loaded="BaseWindow_Loaded">
 
     <Grid>
         <Grid x:Name="MainGrid"
@@ -67,12 +69,12 @@
 
     <mah:MetroWindow.Flyouts>
         <mah:FlyoutsControl>
-            <mah:Flyout x:Name="QuickStartFlyout"
+            <mah:Flyout x:Name="QuickstartFlyout"
                         Position="Left" Header="Quick Start"
                         Theme="Accent"
                         Margin="0,31,0,0"
                         Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=mah:MetroWindow}, Path=ActualWidth}">
-                <Frame x:Name="QuickStartFrame"
+                <Frame x:Name="QuickstartFrame"
                        NavigationUIVisibility="Hidden"
                        Margin="4"/>
             </mah:Flyout>

@@ -1,4 +1,4 @@
-﻿<Page x:Class="DcConManager.Pages.QuickstartPage2"
+﻿<Page x:Class="DcConManager.Pages.QuickstartPage3"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -7,7 +7,7 @@
       xmlns:controls="clr-namespace:DcConManager.Controls"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="QuickstartPage2">
+      Title="QuickstartPage1">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -16,7 +16,7 @@
         </Grid.RowDefinitions>
 
         <TextBlock Grid.Row="0"
-                   Text="2. BridgeBBCC 경로 설정"/>
+                   Text="3. Github 연결설정"/>
 
         <StackPanel Grid.Row="1"
                     Orientation="Horizontal"

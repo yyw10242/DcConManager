@@ -22,14 +22,7 @@ namespace DcConManager.Pages
             this.InitializeComponent();
         }
 
-        private void PrevButton_Click(object sender, RoutedEventArgs e)
-        {
-            Core.MainWindow.QuickStartFrame.Content = Core.QuickstartPage1;
-        }
-
-        private void NextButton_Click(object sender, RoutedEventArgs e)
-        {
-            // Do nothing
-        }
+        private void PrevButton_Click(object sender, RoutedEventArgs e) => Core.QuickstartManager.GoPrev();
+        private void NextButton_Click(object sender, RoutedEventArgs e) => Core.QuickstartManager.GoNext();
     }
 }

@@ -15,9 +15,9 @@ using System.Windows.Shapes;
 
 namespace DcConManager.Pages
 {
-    public partial class QuickstartPage1 : Page
+    public partial class QuickstartPage3 : Page
     {
-        public QuickstartPage1()
+        public QuickstartPage3()
         {
             this.InitializeComponent();
         }

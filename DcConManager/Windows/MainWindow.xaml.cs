@@ -26,7 +26,12 @@ namespace DcConManager.Windows
 
             this.SetImages();
 
-            this.QuickStartFrame.Content = Core.QuickstartPage1;
+            
+        }
+
+        private void BaseWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            Core.QuickstartManager.Reset();
         }
 
         private void SetImages()
@@ -38,7 +43,7 @@ namespace DcConManager.Windows
 
         private void Button0_Click(object sender, RoutedEventArgs e)
         {
-            this.QuickStartFlyout.IsOpen = !this.QuickStartFlyout.IsOpen;
+            this.QuickstartFlyout.IsOpen = !this.QuickstartFlyout.IsOpen;
         }
 
         private void Button1_Click(object sender, RoutedEventArgs e)
@@ -50,5 +55,7 @@ namespace DcConManager.Windows
         {
 
         }
+
+
     }
 }

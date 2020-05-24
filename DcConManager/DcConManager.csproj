@@ -171,11 +171,18 @@
     <Compile Include="FileIO\DcCon.cs" />
     <Compile Include="FileIO\Files.cs" />
     <Compile Include="FileIO\Tag.cs" />
+    <Compile Include="Pages\QuickstartManager.cs" />
     <Compile Include="Pages\QuickstartPage1.xaml.cs">
       <DependentUpon>QuickstartPage1.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\QuickstartPage2.xaml.cs">
       <DependentUpon>QuickstartPage2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\QuickstartPage3.xaml.cs">
+      <DependentUpon>QuickstartPage3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\QuickstartPage4.xaml.cs">
+      <DependentUpon>QuickstartPage4.xaml</DependentUpon>
     </Compile>
     <Compile Include="Utilities\ExtendedMethods\System.Windows.Controls.Image.cs" />
     <Compile Include="Windows\BaseWindow.cs" />
@@ -221,6 +228,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\QuickstartPage2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\QuickstartPage3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\QuickstartPage4.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

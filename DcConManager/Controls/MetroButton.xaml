@@ -1,11 +1,11 @@
 ﻿<Button x:Class="DcConManager.Controls.MetroButton"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:mtc="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
         xmlns:local="clr-namespace:DcConManager.Controls"
 
         Margin="0"
-        mtc:ButtonHelper.PreserveTextCase="True"
+        mah:ButtonHelper.PreserveTextCase="True"
         Style="{StaticResource SquareButtonStyle}">
 
     <StackPanel Orientation="Horizontal"

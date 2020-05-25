@@ -24,5 +24,10 @@ namespace DcConManager.Pages
 
         private void PrevButton_Click(object sender, RoutedEventArgs e) => Core.QuickstartManager.GoPrev();
         private void NextButton_Click(object sender, RoutedEventArgs e) => Core.QuickstartManager.GoNext();
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

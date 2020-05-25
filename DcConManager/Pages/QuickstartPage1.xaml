@@ -5,9 +5,15 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:DcConManager.Pages"
       xmlns:controls="clr-namespace:DcConManager.Controls"
+      xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="QuickstartPage1">
+      
+      Title="QuickstartPage1"
+      
+      Background="DarkGreen"
+      
+      Loaded="Page_Loaded">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -23,12 +29,20 @@
                     HorizontalAlignment="Right">
             <controls:MetroButton x:Name="PrevButton"
                                   Text="이전" IsEnabled="False"
-                                  Margin="4"
-                                  Click="PrevButton_Click"/>
+                                  Margin="4" Padding="2,0"
+                                  Click="PrevButton_Click">
+                <controls:MetroButton.Icon>
+                    <iconPacks:PackIconFontAwesome Kind="CaretLeftSolid" Height="12" Width="12" Margin="0,0,3,0"/>
+                </controls:MetroButton.Icon>
+            </controls:MetroButton>
             <controls:MetroButton x:Name="NextButton"
                                   Text="다음"
-                                  Margin="4" IsAccented="True"
-                                  Click="NextButton_Click"/>
+                                  Margin="4" Padding="2,0" IsAccented="True"
+                                  Click="NextButton_Click">
+                <controls:MetroButton.Icon>
+                    <iconPacks:PackIconFontAwesome Kind="CaretRightSolid" Height="12" Width="12" Margin="0,0,3,0"/>
+                </controls:MetroButton.Icon>
+            </controls:MetroButton>
         </StackPanel>
     </Grid>
 </Page>

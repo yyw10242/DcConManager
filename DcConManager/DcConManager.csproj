@@ -167,6 +167,9 @@
     <Compile Include="Controls\MetroButton.xaml.cs">
       <DependentUpon>MetroButton.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\MetroWindowCommandButton.xaml.cs">
+      <DependentUpon>MetroWindowCommandButton.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Core.cs" />
     <Compile Include="FileIO\DcCon.cs" />
     <Compile Include="FileIO\Files.cs" />
@@ -220,6 +223,10 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="Controls\MetroButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\MetroWindowCommandButton.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

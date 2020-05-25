@@ -6,6 +6,7 @@
                   xmlns:local="clr-namespace:DcConManager.Windows"
                   xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
                   xmlns:controls="clr-namespace:DcConManager.Controls"
+                  xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
                   mc:Ignorable="d"
 
                   Title="DcConManager For BridgeBBCC"
@@ -16,7 +17,8 @@
                   Height="500" MinHeight="500"
                   Width="700" MinWidth="700"
                   
-                  Loaded="BaseWindow_Loaded">
+                  Loaded="BaseWindow_Loaded"
+                  Closing="BaseWindow_Closing">
 
     <Grid>
         <Grid x:Name="MainGrid"
@@ -67,12 +69,25 @@
         </Grid>
     </Grid>
 
+    <mah:MetroWindow.RightWindowCommands>
+        <mah:WindowCommands>
+            <controls:MetroWindowCommandButton x:Name="TitlebarHomeButton"
+                                               Text="" FontSize="14"
+                                               ToolTip="홈으로"
+                                               Click="TitlebarHomeButton_Click">
+                <controls:MetroWindowCommandButton.Icon>
+                    <iconPacks:PackIconFontAwesome Kind="HomeSolid" Height="20" Width="20" Margin="3,0,2,0"/>
+                </controls:MetroWindowCommandButton.Icon>
+            </controls:MetroWindowCommandButton>
+        </mah:WindowCommands>
+    </mah:MetroWindow.RightWindowCommands>
+
     <mah:MetroWindow.Flyouts>
         <mah:FlyoutsControl>
             <mah:Flyout x:Name="QuickstartFlyout"
                         Position="Left" Header="Quick Start"
                         Theme="Accent"
-                        Margin="0,31,0,0"
+                        Margin="0,30,0,0"
                         Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=mah:MetroWindow}, Path=ActualWidth}">
                 <Frame x:Name="QuickstartFrame"
                        NavigationUIVisibility="Hidden"
